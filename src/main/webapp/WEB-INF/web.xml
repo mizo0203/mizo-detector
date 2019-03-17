@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>line_hook</servlet-name>
+        <servlet-class>com.mizo0203.detector.MizoDetectorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>line_hook</servlet-name>
+        <url-pattern>/line_hook</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <listener>
+        <listener-class>com.mizo0203.detector.repo.objectify.OfyHelper</listener-class>
+    </listener>
+</web-app>
