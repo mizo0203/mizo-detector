@@ -1,5 +1,7 @@
 # みぞ発見器
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/0588d8f208446bc190cd/maintainability)](https://codeclimate.com/github/mizo0203/mizo-detector/maintainability)
+
 みぞを探す LINE BOT
 
 [みぞが購入した LINE 対応ビーコン](https://twitter.com/mizo0203/status/1105669284921958400)に反応して、 LINE メッセージを送信します。
